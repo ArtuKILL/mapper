@@ -1,12 +1,12 @@
 {
-  "name": "shortpaper-1",
+  "name": "quiz",
   "version": "1.0.0",
-  "description": "Código del primer shortpaper",
+  "description": "Código del primer quiz",
   "main": "main.ts",
   "scripts": {
     "test": "jest",
     "prepare": "husky install",
-    "start": "ts-node ./main.ts"
+    "start": "ts-node ./bin/main.ts"
   },
   "lint-staged": {
     "lib/**/*.ts": [
