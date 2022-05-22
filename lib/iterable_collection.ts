@@ -1,5 +1,5 @@
 import { Iterator } from "./iterator";
 
-export interface IterableCollection {
-  createIterator(name: String): Iterator;
+export interface IterableCollection<T> {
+  createIterator(name: String): Iterator<T>;
 }

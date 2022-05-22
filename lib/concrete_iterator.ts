@@ -4,7 +4,7 @@ import { Person } from "./person";
 
 //More like PersonIterator
 
-export class ConcreteIterator implements Iterator {
+export class ConcreteIterator implements Iterator<Person> {
   private _collection: ConcreteCollection;
   private _personId: string;
 
@@ -16,6 +16,7 @@ export class ConcreteIterator implements Iterator {
   getNext(): Person {
     throw new Error("Method not implemented.");
   }
+
   hasMore(): boolean {
     throw new Error("Method not implemented.");
   }
