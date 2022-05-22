@@ -1,5 +1,5 @@
 import { Iterator } from "../lib/iterator";
-import { IterableCollection } from "../lib/iterableCollection";
+import { IterableCollection } from "../lib/iterable_collection";
 
 class App {
   private iterable: IterableCollection;

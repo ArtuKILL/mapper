@@ -1,4 +1,6 @@
+import { Person } from "./person";
+
 export interface Iterator {
-  getNext(): void;
+  getNext(): Person; // ¿Aqui no hay acoplamiento con las clase concreta Person?
   hasMore(): boolean;
 }
