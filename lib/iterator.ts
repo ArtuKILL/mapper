@@ -6,6 +6,7 @@
 // }
 
 export interface Iterator<T> {
-  getNext(): T; // Con la ayuda del polimorfismo parametrico, se puede desacoplar de la clase persona.
+  next(): T; // Con la ayuda del polimorfismo parametrico, se puede desacoplar de la clase persona.
   hasMore(): boolean;
+  current(): T;
 }

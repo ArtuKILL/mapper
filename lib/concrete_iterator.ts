@@ -6,18 +6,23 @@ import { Person } from "./person";
 
 export class ConcreteIterator implements Iterator<Person> {
   private _collection: ConcreteCollection;
-  private _personId: string;
+  private position: number = 0;
 
-  constructor(collection: ConcreteCollection, personId: string) {
+  constructor(collection: ConcreteCollection) {
     this._collection = collection;
-    this._personId = personId;
   }
 
-  getNext(): Person {
-    throw new Error("Method not implemented.");
+  next(): Person {
+    const element = this._collection.items[this.position];
+    this.position++;
+    return element;
+  }
+
+  current(): Person {
+    return this._collection.items[this.position];
   }
 
   hasMore(): boolean {
-    throw new Error("Method not implemented.");
+    return this.position >= this._collection.length;
   }
 }
