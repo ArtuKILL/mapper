@@ -8,5 +8,6 @@
 export interface Iterator<T> {
   next(): T; // Con la ayuda del polimorfismo parametrico, se puede desacoplar de la clase persona.
   hasMore(): boolean;
-  current(): T;
+  // current(): T;
+  // key(): number; //deberia ser otro tipo
 }

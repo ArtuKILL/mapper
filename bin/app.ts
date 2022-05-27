@@ -1,7 +1,6 @@
-import { Iterator } from "../lib/iterator";
-import { IterableCollection } from "../lib/iterable_collection";
+import { IterableCollection } from "../lib/iterator/iterable_collection";
 
-class App<T> {
+export class App<T> {
   private iterable: IterableCollection<T>;
 
   constructor(iterable: IterableCollection<T>) {
@@ -9,10 +8,10 @@ class App<T> {
   }
 
   public showCollection(): void {
+    console.log(`Showing collection:`);
     const iterator = this.iterable.createIterator();
-    while (iterator.hasMore) {
-      console.log(iterator.current());
-      iterator.next();
+    while (iterator.hasMore()) {
+      console.table(iterator.next());
     }
   }
 }
