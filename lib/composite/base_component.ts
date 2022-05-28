@@ -1,6 +1,7 @@
 import { Person } from "../person";
+import { Component } from "./component";
 
-export abstract class BaseComponent<T> implements BaseComponent<T> {
+export abstract class BaseComponent<T> implements Component<T> {
   protected _parent: BaseComponent<T> | undefined = undefined;
 
   abstract showTree(): string;

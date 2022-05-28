@@ -8,7 +8,7 @@ export class Mapper<I extends IterableCollection<I>, T>
     const iterator = collection.createIterator();
     const list: T[] = [];
     while (iterator.hasMore()) {
-      let element = iterator.next();
+      const element = iterator.next();
       list.push(f(element));
     }
     return list;
