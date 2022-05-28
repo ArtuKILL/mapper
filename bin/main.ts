@@ -53,4 +53,9 @@ const list = mapper.map(compositeCollection, (element: Composite | Leaf) => {
   return element.member.age * 2;
 });
 
+const list2 = mapper.map(collection, (element: Person) => {
+  return element.age + " edad";
+});
+
 console.log(list);
+console.log(list2);
