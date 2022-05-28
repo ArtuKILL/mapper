@@ -2,7 +2,6 @@ import { Person } from "../person";
 
 export abstract class BaseComponent<T> implements BaseComponent<T> {
   protected _parent: BaseComponent<T> | undefined = undefined;
-  private _member: Person;
 
   abstract showTree(): string;
 
