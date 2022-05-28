@@ -10,10 +10,11 @@ export class CompositeIterator<T> implements Iterator<BaseComponent<T>> {
 
   constructor(compositeCollection: CompositeCollection<T>) {
     this._stack.push(compositeCollection.root);
-    console.log(this.hasMore());
   }
 
   next(): BaseComponent<T> {
+    console.log("Iterator: next");
+
     if (this._stack.isEmpty()) {
       throw new Error("No more elements - stack is empty");
     }
