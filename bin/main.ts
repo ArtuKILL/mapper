@@ -39,8 +39,6 @@ clientCode(tree);
 const collection = new ConcreteCollection(persons);
 const compositeCollection = new CompositeCollection(tree);
 
-const iterator = collection.createIterator();
-
 const app = new App<Person>(collection);
 const app2 = new App<BaseComponent<Person>>(compositeCollection);
 
