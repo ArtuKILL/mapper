@@ -1,7 +1,8 @@
 import { Person } from "../person";
 
 export abstract class BaseComponent<T> implements BaseComponent<T> {
-  protected _parent: BaseComponent<T>;
+  protected _parent: BaseComponent<T> | undefined = undefined;
+  private _member: Person;
 
   abstract showTree(): string;
 
@@ -12,7 +13,7 @@ export abstract class BaseComponent<T> implements BaseComponent<T> {
     return false;
   }
 
-  public get parent(): BaseComponent<T> {
+  public get parent(): BaseComponent<T> | undefined {
     return this._parent;
   }
 
@@ -21,7 +22,7 @@ export abstract class BaseComponent<T> implements BaseComponent<T> {
   }
 
   public getParent(): BaseComponent<T> {
-    return this._parent;
+    return this._parent!;
   }
 
   getChildren(): BaseComponent<T>[] {

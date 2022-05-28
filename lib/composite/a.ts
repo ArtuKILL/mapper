@@ -3,7 +3,13 @@
  * complex objects of a composition.
  */
 abstract class Component {
-  protected _parent: Component;
+  private _parent: Component;
+  protected get parent_1(): Component {
+    return this._parent;
+  }
+  protected set parent_1(value: Component) {
+    this._parent = value;
+  }
 
   /**
    * Optionally, the base Component can declare an interface for setting and

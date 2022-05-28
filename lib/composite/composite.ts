@@ -43,4 +43,8 @@ export class Composite extends BaseComponent<Person> {
   public getChildren(): BaseComponent<Person>[] {
     return this._children;
   }
+
+  public get member(): Person {
+    return this._member;
+  }
 }

@@ -21,6 +21,10 @@ export class Leaf extends BaseComponent<Person> {
     return `${this._member.name}[${this._member.age}]`;
   }
 
+  public get member(): Person {
+    return this._member;
+  }
+
   //Esta clase hereda algunos metodos de la interfaz que se encargan de la gestión
   //de los hijos dle composite, en esta clase los hereda vacio.
 }

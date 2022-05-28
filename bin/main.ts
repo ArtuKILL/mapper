@@ -4,6 +4,7 @@ import { Composite } from "../lib/composite/composite";
 import { Leaf } from "../lib/composite/leaf";
 import { CompositeCollection } from "../lib/iterator/composite_collection";
 import { ConcreteCollection } from "../lib/iterator/concrete_collection";
+import { Mapper } from "../lib/mapper/mapper";
 import { Person } from "../lib/person";
 import { App } from "./app";
 
@@ -43,5 +44,13 @@ const iterator = collection.createIterator();
 const app = new App<Person>(collection);
 const app2 = new App<BaseComponent<Person>>(compositeCollection);
 
-app.showCollection();
-app2.showCollection();
+// app.showCollection();
+// app2.showCollection();
+
+const mapper = new Mapper();
+
+const list = mapper.map(compositeCollection, (element: Composite | Leaf) => {
+  return element.member.age * 2;
+});
+
+console.log(list);
