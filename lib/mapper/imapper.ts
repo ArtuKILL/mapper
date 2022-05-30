@@ -1,5 +1,5 @@
 import { IterableCollection } from "../iterator/iterable_collection";
 
-export interface Imapper<I extends IterableCollection<I>, T> {
-  map(iterable: I, f: Function): T[];
+export interface Imapper<I, T> {
+  map(iterable: IterableCollection<I>, f: Function): T[];
 }

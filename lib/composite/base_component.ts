@@ -1,4 +1,3 @@
-import { Person } from "../person";
 import { Component } from "./component";
 
 export abstract class BaseComponent<T> implements Component<T> {
@@ -25,7 +24,7 @@ export abstract class BaseComponent<T> implements Component<T> {
     return this._parent!;
   }
 
-  getChildren(): BaseComponent<T>[] {
+  public getChildren(): BaseComponent<T>[] {
     return [];
   }
 }

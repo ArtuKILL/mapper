@@ -23,9 +23,7 @@ export class CompositeIterator<T> implements Iterator<BaseComponent<T>> {
       throw new Error("Undefined node");
     }
 
-    if (node.isComposite()) {
-      node.getChildren().forEach((child) => this._stack.push(child));
-    }
+    node.getChildren().forEach((child) => this._stack.push(child));
 
     return node;
   }

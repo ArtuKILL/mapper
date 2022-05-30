@@ -11,7 +11,6 @@ import { Component } from "./component";
 
 export class Leaf extends BaseComponent<Person> {
   private _member: Person;
-
   constructor(member: Person) {
     super();
     this._member = member;

@@ -45,13 +45,11 @@ const app2 = new App<BaseComponent<Person>>(compositeCollection);
 // app.showCollection();
 // app2.showCollection();
 
-const mapper = new Mapper();
-
-const list = mapper.map(compositeCollection, (element: Composite | Leaf) => {
+const list = Mapper.map(compositeCollection, (element: Composite | Leaf) => {
   return element.member.age * 2;
 });
 
-const list2 = mapper.map(collection, (element: Person) => {
+const list2 = Mapper.map(collection, (element: Person) => {
   return element.age + " edad";
 });
 
