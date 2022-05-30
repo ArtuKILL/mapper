@@ -2,6 +2,7 @@ import { BaseComponent } from "../lib/composite/base_component";
 import { Component } from "../lib/composite/component";
 import { Composite } from "../lib/composite/composite";
 import { Leaf } from "../lib/composite/leaf";
+import { Filter } from "../lib/filter/filter";
 import { CompositeCollection } from "../lib/iterator/composite_collection";
 import { ConcreteCollection } from "../lib/iterator/concrete_collection";
 import { Mapper } from "../lib/mapper/mapper";
@@ -53,5 +54,19 @@ const list2 = Mapper.map(collection, (element: Person) => {
   return element.age + " edad";
 });
 
+const filteredList = Filter.filter(collection, (element: Person) => {
+  return !(element.age % 2);
+});
+
+const filteredTree = Filter.filter(
+  compositeCollection,
+  (element: Leaf | Composite) => {
+    console.log(element.member.age % 2 === 0);
+    return element.member.age % 2 === 0;
+  }
+);
+
 console.log(list);
 console.log(list2);
+console.log(filteredList);
+console.log(filteredTree);
