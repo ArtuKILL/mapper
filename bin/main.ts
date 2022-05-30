@@ -46,27 +46,23 @@ const app2 = new App<BaseComponent<Person>>(compositeCollection);
 // app.showCollection();
 // app2.showCollection();
 
-const list = Mapper.map(compositeCollection, (element: Composite | Leaf) => {
+const list = Mapper.map(compositeCollection, (element) => {
   return element.member.age * 2;
 });
 
-const list2 = Mapper.map(collection, (element: Person) => {
+const list2 = Mapper.map(collection, (element) => {
   return element.age + " edad";
 });
 
-const filteredList = Filter.filter(collection, (element: Person) => {
+const filteredList = Filter.filter(collection, (element) => {
   return !(element.age % 2);
 });
 
-const filteredTree = Filter.filter(
-  compositeCollection,
-  (element: Leaf | Composite) => {
-    console.log(element.member.age % 2 === 0);
-    return element.member.age % 2 === 0;
-  }
-);
+const filteredTree = Filter.filter(compositeCollection, (element) => {
+  return element.member.age % 2 !== 0;
+});
 
-console.log(list);
-console.log(list2);
-console.log(filteredList);
+// console.log(list);
+// console.log(list2);
+// console.log(filteredList);
 console.log(filteredTree);

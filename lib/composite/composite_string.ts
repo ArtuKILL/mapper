@@ -2,11 +2,9 @@ import { BaseComponent } from "./base_component";
 
 export class CompositeString extends BaseComponent<string> {
   private _children: BaseComponent<string>[] = [];
-  private _member: string;
 
   constructor(member: string = "") {
-    super();
-    this._member = member;
+    super(member);
   }
 
   public add(component: BaseComponent<string>): void {

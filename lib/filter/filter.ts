@@ -1,7 +1,10 @@
 import { IterableCollection } from "../iterator/iterable_collection";
 
 export class Filter {
-  public static filter<I>(collection: IterableCollection<I>, f: Function): I[] {
+  public static filter<I>(
+    collection: IterableCollection<I>,
+    f: (e: I) => boolean
+  ): I[] {
     const newList: I[] = [];
     const iterator = collection.createIterator();
     while (iterator.hasMore()) {

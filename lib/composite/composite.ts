@@ -11,10 +11,9 @@ import { Component } from "./component";
 
 export class Composite extends BaseComponent<Person> {
   private _children: BaseComponent<Person>[] = [];
-  private _member: Person;
-  constructor(person: Person) {
-    super();
-    this._member = person;
+
+  constructor(member: Person) {
+    super(member);
   }
 
   public showTree(): string {

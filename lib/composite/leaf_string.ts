@@ -1,11 +1,8 @@
 import { BaseComponent } from "./base_component";
 
 export class LeafString extends BaseComponent<string> {
-  private _member: string;
-
   constructor(member: string) {
-    super();
-    this._member = member;
+    super(member);
   }
 
   public showTree(): string {

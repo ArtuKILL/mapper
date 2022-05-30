@@ -10,10 +10,8 @@ import { Component } from "./component";
 //el trabajo.
 
 export class Leaf extends BaseComponent<Person> {
-  private _member: Person;
   constructor(member: Person) {
-    super();
-    this._member = member;
+    super(member);
   }
 
   public showTree(): string {
@@ -24,6 +22,6 @@ export class Leaf extends BaseComponent<Person> {
     return this._member;
   }
 
-  //Esta clase hereda algunos metodos de la interfaz que se encargan de la gestión
-  //de los hijos dle composite, en esta clase los hereda vacio.
+  //  Esta clase hereda algunos metodos de la interfaz que se encargan de la gestión
+  //  de los hijos dle composite, en esta clase los hereda vacio.
 }
