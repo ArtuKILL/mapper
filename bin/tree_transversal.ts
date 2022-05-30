@@ -33,9 +33,7 @@ const collection = new CompositeCollection<string>(root);
 
 const list = Mapper.map(
   collection,
-  (element: CompositeString | LeafString) =>
-    element.member + "[" + element.member.length + "]"
+  (element) => element.member + "[" + element.member.length + "] "
 );
 
 console.log(list);
-
