@@ -6,7 +6,7 @@ Ejercicio tipo quiz
 
 - Tener [node](https://nodejs.org/en/)
 - Clonar repo
-- Ejecutar `npm install` para instalar dependecias (tes-node, typescript, etc...)
+- Ejecutar `npm install` para instalar dependecias (ts-node, typescript, etc...)
 - Ejeutar `npm start` para correr el proyecto
 **Output:**
 ```bash
