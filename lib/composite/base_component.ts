@@ -14,10 +14,6 @@ export abstract class BaseComponent<T> implements Component<T> {
   public add(component: BaseComponent<T>): void {}
   public remove(component: BaseComponent<T>): void {}
 
-  public isComposite(): boolean {
-    return false;
-  }
-
   public get parent(): BaseComponent<T> | undefined {
     return this._parent;
   }

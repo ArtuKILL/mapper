@@ -1,5 +1,7 @@
 import { IterableCollection } from "../lib/iterator/iterable_collection";
 
+// Solo depende de la interfaz iterable collection
+
 export class App<T> {
   private iterable: IterableCollection<T>;
 

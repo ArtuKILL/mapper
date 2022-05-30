@@ -10,6 +10,5 @@ export interface Component<T> {
   add(component: Component<T>): void;
   remove(component: Component<T>): void;
   getChildren(): Component<T>[];
-  isComposite(): boolean;
   setParent(component: Component<T>): void;
 }

@@ -1,8 +1,9 @@
-import { BaseComponent } from "../lib/composite/base_component";
 import { CompositeString } from "../lib/composite/composite_string";
 import { LeafString } from "../lib/composite/leaf_string";
 import { CompositeCollection } from "../lib/iterator/composite_collection";
 import { Mapper } from "../lib/mapper/mapper";
+
+//Prueba del recorrido del Árbbol
 
 const root = new CompositeString("A");
 const B = new CompositeString("B");
@@ -17,17 +18,17 @@ const J = new LeafString("J");
 const K = new LeafString("K");
 const L = new LeafString("L");
 
+root.add(B); // A
+root.add(C); // A
 B.add(D);
 D.add(E);
 D.add(F);
 D.add(G);
+G.add(L);
 C.add(H);
 C.add(I);
 C.add(J);
 C.add(K);
-G.add(L);
-root.add(B);
-root.add(C);
 
 const collection = new CompositeCollection<string>(root);
 
