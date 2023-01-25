@@ -60,8 +60,10 @@ const list = Mapper.map(compositeCollection, (element) => {
   return element.member.age * 2;
 });
 
+let mapper = new Mapper();
+
 // Mapper de un composite
-const list2 = Mapper.map(collection, (element) => {
+const list2 = mapper.map(collection, (element) => {
   return element.age + " edad";
 });
 
@@ -77,5 +79,5 @@ const filteredTree = Filter.filter(compositeCollection, (element) => {
 
 // console.log(list);
 console.log(list2);
-// console.log(filteredList);
-// console.log(filteredTree);
+console.log(filteredList);
+console.log(filteredTree);

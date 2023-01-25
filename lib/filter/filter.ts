@@ -1,6 +1,10 @@
 import { IterableCollection } from "../iterator/iterable_collection";
+import { Ifilter } from "./ifilter";
 
-export class Filter {
+export class Filter implements Ifilter {
+  filter<I>(collection: IterableCollection<I>, f: (e: I) => boolean): I[] {
+    return Filter.filter(collection, f);
+  }
   public static filter<I>(
     collection: IterableCollection<I>,
     f: (e: I) => boolean
