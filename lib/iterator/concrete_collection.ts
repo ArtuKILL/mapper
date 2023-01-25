@@ -7,6 +7,10 @@ import { IterableCollection } from "./iterable_collection";
 
 //Esta clase  concreta debe estar acoplada a ciertas clases como en el caso lo son Person y ConcreteIterator.
 //A pesar de esto la app nop esta acoplada a estas ya que la clase cumple con la firma de la interfaz Iterator.
+//NOTE: Creo que se puede hacer más generico, tengo dudas si vale la pena
+//HINT: class ConcreteCollection implements IterableCollection<Person>
+//      -> class ConcreteCollection<List<T>> implements IterableCollection<T> ¿?
+// No se si compilel, solo es una revisión del códido
 export class ConcreteCollection implements IterableCollection<Person> {
   //este array no solo puede ser de Personas si no de otras cosas, no se si puede ser otra cosa que no sea
   //un array (lista) si no como en el caso del quiz un COMPOSITE

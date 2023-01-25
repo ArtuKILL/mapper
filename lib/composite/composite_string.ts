@@ -16,10 +16,6 @@ export class CompositeString extends BaseComponent<string> {
     this._children = this._children.filter((c) => c != component);
   }
 
-  public isComposite(): boolean {
-    return true;
-  }
-
   public showTree(): string {
     const children = this._children.map((child) => {
       return child.showTree();

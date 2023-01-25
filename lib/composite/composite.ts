@@ -34,10 +34,6 @@ export class Composite extends BaseComponent<Person> {
     this._children = this._children.filter((c) => c != component);
   }
 
-  public isComposite(): boolean {
-    return true;
-  }
-
   public getChildren(): BaseComponent<Person>[] {
     return this._children;
   }
