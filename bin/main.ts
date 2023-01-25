@@ -42,7 +42,7 @@ function clientCode<T>(component: Component<T>) {
   console.log(`Result: ${component.showTree()}`);
 }
 
-clientCode(root);
+// clientCode(root);
 
 // Se crean las colecciones de las respectivas estructuras de datos
 const collection = new ConcreteCollection(persons);
@@ -76,6 +76,6 @@ const filteredTree = Filter.filter(compositeCollection, (element) => {
 });
 
 // console.log(list);
-// console.log(list2);
+console.log(list2);
 // console.log(filteredList);
-console.log(filteredTree);
+// console.log(filteredTree);

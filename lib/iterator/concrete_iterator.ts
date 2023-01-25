@@ -1,24 +1,23 @@
 import { Iterator } from "./iterator";
 import { ConcreteCollection } from "./concrete_collection";
-import { Person } from "../person";
 
 //More like PersonIterator
 
-export class ConcreteIterator implements Iterator<Person> {
-  private _collection: ConcreteCollection;
+export class ConcreteIterator<T> implements Iterator<T> {
+  private _collection: ConcreteCollection<T>;
   private _position: number = 0;
 
-  constructor(collection: ConcreteCollection) {
+  constructor(collection: ConcreteCollection<T>) {
     this._collection = collection;
   }
 
-  public next(): Person {
+  public next(): T {
     const element = this._collection.items[this._position];
     this._position++;
     return element;
   }
 
-  public current(): Person {
+  public current(): T {
     return this._collection.items[this._position];
   }
 
