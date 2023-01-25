@@ -31,7 +31,7 @@ export class Composite extends BaseComponent<Person> {
   }
 
   public override remove(component: Component<string>): void {
-    this._children = this._children.filter((c) => c != component);
+    this._children = this._children.filter((c) => c !== component);
   }
 
   public getChildren(): BaseComponent<Person>[] {

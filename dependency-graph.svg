@@ -8,7 +8,7 @@
  viewBox="0.00 0.00 474.00 586.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 582)">
 <title>dependency&#45;cruiser output</title>
-<polygon fill="none" stroke="none" points="-4,4 -4,-582 470,-582 470,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-582 470,-582 470,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_bin</title>
 <path fill="#ffffff" stroke="black" stroke-width="2" d="M20,-488C20,-488 213,-488 213,-488 219,-488 225,-494 225,-500 225,-500 225,-558 225,-558 225,-564 219,-570 213,-570 213,-570 20,-570 20,-570 14,-570 8,-564 8,-558 8,-558 8,-500 8,-500 8,-494 14,-488 20,-488"/>

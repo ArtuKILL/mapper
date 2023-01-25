@@ -13,7 +13,7 @@ export class CompositeString extends BaseComponent<string> {
   }
 
   public remove(component: BaseComponent<string>): void {
-    this._children = this._children.filter((c) => c != component);
+    this._children = this._children.filter((c) => c !== component);
   }
 
   public showTree(): string {
