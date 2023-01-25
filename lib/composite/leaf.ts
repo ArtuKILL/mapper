@@ -1,6 +1,5 @@
 import { Person } from "../person";
 import { BaseComponent } from "./base_component";
-import { Component } from "./component";
 
 // La hoja es un elemento básico que no tiene subelementos
 // Elemento terminal

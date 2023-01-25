@@ -1,7 +1,5 @@
 import { Iterator } from "./iterator";
-import { Composite } from "../composite/composite";
 import { CompositeCollection } from "./composite_collection";
-import { ConcreteCollection } from "./concrete_collection";
 import { BaseComponent } from "../composite/base_component";
 import { Stack } from "../stack/stack";
 

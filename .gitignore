@@ -1,1 +1,3 @@
 node_modules/
+.dependecy-cruiser,js
+dependecy-graph.svg
